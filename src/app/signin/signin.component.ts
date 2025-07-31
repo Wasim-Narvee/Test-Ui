@@ -43,7 +43,7 @@ next : (res)=> {
 
 },
 
-error : (err) =>{
+error : (err) =>{ 
 
   console.log('Check your Name/email ',err);
 }
