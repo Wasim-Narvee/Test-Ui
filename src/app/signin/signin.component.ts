@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { TestService } from '../test.service';
-import { Route, Router } from '@angular/router';
+import {  Router } from '@angular/router';
 
 @Component({
   selector: 'app-signin',
@@ -33,27 +33,17 @@ console.log(this.signin.value,'signinnnnnnn');
 
 
 this.test.postUsersdata(this.signin.value).subscribe ({
-
 next : (res)=> {
- 
   console.log('Data Saved',res);
-
-  this.router.navigate (['/dashboard'])
-
-
+  this.router.navigate (['/employee'])
 },
 
-error : (err) =>{ 
 
+error : (err) =>{
   console.log('Check your Name/email ',err);
 }
 
-
-})
-
-
-
-
+});
 
 }
 

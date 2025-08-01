@@ -7,12 +7,22 @@ import { Observable } from 'rxjs';
 })
 export class TestService {
 
-  private apiUrl ='http://localhost:3000/Post'; 
+  private apiUrl =""; 
   constructor(private http:HttpClient) { }
 
-  postUsersdata(data:any): Observable<any>{
 
-    return this.http.post(this.apiUrl,data);
+// Post Method To save Data in Backend Data Base
+  postUsersdata(data:any): Observable<any>{                                           
+
+    return this.http.post(this.apiUrl,data);      
   }
+
+  // To get data From
+
+getEmployee():Observable<any>
+{
+
+  return this.http.get(this.apiUrl)
+}
 
 }
