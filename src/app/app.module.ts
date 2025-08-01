@@ -6,13 +6,13 @@ import { AppComponent } from './app.component';
 import { SigninComponent } from './signin/signin.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { EmployeeComponent } from './employee/employee.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SigninComponent,
-    DashboardComponent
+    EmployeeComponent
   ],
   imports: [
     BrowserModule,

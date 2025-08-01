@@ -1,0 +1,24 @@
+<h2>Employee Details</h2>
+
+<table border="1" *ngIf=" showTable && showemployee.length > 0">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Mobile No</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let show of showemployee">
+      <td>{{ show.id }}</td>
+      <td>{{ show.name }}</td>
+      <td>{{ show.email }}</td>
+      <td>{{ show.mobile }}</td>
+      <td>{{ show.status }}</td>
+     
+    </tr>
+  </tbody>
+</table>
+<button (click)="toogleshoeemployee()" style="gap: 20px; align-items: center; color: white; background-color: rgb(0, 0, 0); box-shadow: 0px 4px 5px rgb(1, 22, 31); padding: 10px 20px;  ">{{showTable? 'Hide':'Show'}} Employee</button>
